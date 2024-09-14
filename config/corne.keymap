@@ -24,7 +24,7 @@
 &kp TAB                                   &kp DE_Q  &kp DE_W  &kp DE_E  &kp DE_R               &kp DE_T     &kp DE_Z   &kp DE_U                &kp DE_I      &kp DE_O    &kp DE_P         &kp DE_U_UMLAUT
 &lt 1 C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &kp DE_A  &kp DE_S  &kp DE_D  &mt LEFT_CONTROL DE_F  &kp DE_G     &kp DE_H   &mt RIGHT_CONTROL DE_J  &kp DE_K      &kp DE_L    &kp DE_O_UMLAUT  &lt 1 DE_A_UMLAUT
 &kp LSHFT                                 &kp DE_Y  &kp DE_X  &kp DE_C  &kp DE_V               &kp DE_B     &kp DE_N   &kp DE_M                &kp DE_COMMA  &kp DE_DOT  &kp DE_MINUS     &kp RIGHT_SHIFT
-                                                              &kp LGUI  &mo 1                  &kp ENTER    &kp SPACE  &lt 2 RIGHT_SHIFT       &kp RALT
+                                                              &kp LGUI  &mo 3                  &kp ENTER    &kp SPACE  &lt 2 RIGHT_SHIFT       &kp RALT
             >;
         };
 
@@ -45,10 +45,19 @@
 
         layer_3 {
             bindings = <
-&trans  &none     &kp PG_DN  &kp UP     &kp PG_UP  &none      &kp RC(DE_Z)  &kp RC(RS(DE_Z))   &none            &none                  &none   &none
-&none   &kp HOME  &kp LEFT   &kp DOWN   &kp RIGHT  &kp END    &kp LEFT_WIN  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp RS(RIGHT_CONTROL)  &none   &none
-&none   &none     &kp LC(X)  &kp LC(C)  &kp LC(V)  &none      &trans        &trans             &trans           &trans                 &trans  &trans
-                             &trans     &trans     &trans     &trans        &trans             &trans
+&trans  &none     &kp PG_DN  &kp UP     &kp PG_UP               &none         &kp RC(DE_Z)  &kp RC(RS(DE_Z))   &none            &none                  &none  &trans
+&none   &kp HOME  &kp LEFT   &kp DOWN   &kp RIGHT               &kp END       &kp LEFT_WIN  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp RS(RIGHT_CONTROL)  &none  &none
+&none   &none     &kp LC(X)  &kp LC(C)  &kp LC(V)               &none         &none         &none              &none            &none                  &none  &none
+                             &trans     &kp RC(RS(LEFT_ARROW))  &kp DELETE    &none         &trans             &none
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp DE_PLUS      &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_MINUS  &none
+&trans  &trans  &trans  &trans  &trans  &trans    &kp DE_ASTERISK  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_SLASH  &none
+&trans  &trans  &trans  &trans  &trans  &trans    &kp ENTER        &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_COMMA  &kp DE_DOT
+                        &trans  &trans  &trans    &trans           &trans     &kp DE_N0
             >;
         };
 
