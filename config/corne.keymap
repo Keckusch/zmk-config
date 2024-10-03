@@ -139,7 +139,7 @@
 &kp TAB               &kp DE_Q                           &kp DE_W                           &kp DE_E                      &kp DE_R                             &kp DE_T     &kp DE_Z   &kp DE_U                              &kp DE_I                       &kp DE_O                            &kp DE_P                                   &kp DE_U_UMLAUT
 &neo_level_l 1 DE_SZ  &hr_l_win_alt_shift LEFT_WIN DE_A  &hr_l_win_alt_shift LEFT_ALT DE_S  &hr_l_ctrl LEFT_CONTROL DE_D  &hr_l_win_alt_shift LEFT_SHIFT DE_F  &kp DE_G     &kp DE_H   &hr_r_win_alt_shift RIGHT_SHIFT DE_J  &hr_r_crtl RIGHT_CONTROL DE_K  &hr_r_win_alt_shift RIGHT_ALT DE_L  &hr_r_win_alt_shift RIGHT_WIN DE_O_UMLAUT  &neo_level_r 1 DE_A_UMLAUT
 &kp LSHFT             &kp DE_Y                           &kp DE_X                           &kp DE_C                      &kp DE_V                             &kp DE_B     &kp DE_N   &kp DE_M                              &kp DE_COMMA                   &kp DE_DOT                          &kp DE_MINUS                               &kp RIGHT_SHIFT
-                                                                                            &level_switch 5 LG(TAB)       &level_switch 3 DELETE               &kp ENTER    &kp SPACE  &level_switch 2 BACKSPACE             &level_switch 5 RIGHT_SHIFT
+                                                                                            &level_switch 5 LG(TAB)       &level_switch 3 DELETE               &kp ENTER    &kp SPACE  &level_switch 2 BACKSPACE             &level_switch 4 RIGHT_SHIFT
             >;
         };
 
