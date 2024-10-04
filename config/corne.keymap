@@ -63,6 +63,34 @@
 
             label = "SHUT_DOWN";
         };
+
+        sleep_mac: sleep_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp C_EJECT>,
+                <&macro_release>,
+                <&kp LEFT_ALT &kp LEFT_WIN>;
+
+            label = "SLEEP_MAC";
+        };
+
+        shut_down_mac: shut_down_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN &kp LEFT_CONTROL &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp C_EJECT>,
+                <&macro_release>,
+                <&kp LEFT_ALT &kp LEFT_CONTROL &kp LEFT_WIN>;
+
+            label = "SHUT_DOWN_MAC";
+        };
     };
 
     behaviors {
@@ -148,9 +176,9 @@
         compatible = "zmk,combos";
 
         prefs_l {
-            bindings = <&lt 4 LEFT_SHIFT>;
+            bindings = <&mo 4>;
             key-positions = <37 36>;
-            layers = <0 6>;
+            layers = <0>;
         };
 
         del_word {
@@ -161,9 +189,9 @@
         };
 
         prefs_r {
-            bindings = <&lt 4 LEFT_SHIFT>;
+            bindings = <&mo 4>;
             key-positions = <40 41>;
-            layers = <0 6>;
+            layers = <0>;
         };
 
         r_t {
@@ -182,6 +210,18 @@
             bindings = <&kp DE_U_UMLAUT>;
             key-positions = <11 10>;
             layers = <0>;
+        };
+
+        prefs_l_mac {
+            bindings = <&mo 9>;
+            key-positions = <37 36>;
+            layers = <6>;
+        };
+
+        prefs_r_mac {
+            bindings = <&mo 9>;
+            key-positions = <40 41>;
+            layers = <6>;
         };
     };
 
@@ -247,7 +287,7 @@
 &bt BT_CLR  &none         &none         &none         &none         &none           &none            &none                 &none          &none            &none              &none
 &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_PREVIOUS   &kp C_PLAY_PAUSE      &kp C_NEXT     &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &none
 &none       &none         &none         &none         &none         &none           &rgb_ug RGB_TOG  &kp C_BRIGHTNESS_INC  &kp C_BRI_DEC  &none            &none              &none
-                                        &shut_down    &sleep_win    &kp LG(DE_L)    &none            &none                 &none
+                                        &shut_down    &gresc        &kp LG(DE_L)    &none            &none                 &none
             >;
         };
 
@@ -284,6 +324,15 @@
 &none    &kp HOME  &kp LEFT   &kp DOWN   &kp RIGHT  &kp END    &none         &kp RIGHT_SHIFT   &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_WIN  &none
 &none    &none     &kp LC(X)  &kp LC(C)  &kp LC(V)  &none      &none         &none             &none              &none          &none          &none
                               &none      &none      &none      &none         &none             &none
+            >;
+        };
+
+        prefs_mac {
+            bindings = <
+&bt BT_CLR  &none         &none         &none         &none         &none           &none            &none                 &none          &none            &none              &none
+&none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_PREVIOUS   &kp C_PLAY_PAUSE      &kp C_NEXT     &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &none
+&none       &none         &none         &none         &none         &none           &rgb_ug RGB_TOG  &kp C_BRIGHTNESS_INC  &kp C_BRI_DEC  &none            &none              &none
+                                        &shut_down    &gresc        &kp LG(DE_L)    &none            &none                 &none
             >;
         };
     };
