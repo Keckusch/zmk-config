@@ -11,11 +11,15 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &mt {
-    tapping-term-ms = <400>;
+    tapping-term-ms = <300>;
+    quick-tap-ms = <200>;
+    flavor = "tap-preferred";
 };
 
 &lt {
     tapping-term-ms = <400>;
+    quick-tap-ms = <200>;
+    flavor = "tap-preferred";
 };
 
 / {
