@@ -10,18 +10,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
-&mt {
-    tapping-term-ms = <300>;
-    quick-tap-ms = <200>;
-    flavor = "tap-preferred";
-};
-
-&lt {
-    tapping-term-ms = <400>;
-    quick-tap-ms = <200>;
-    flavor = "tap-preferred";
-};
-
 / {
     macros {
         switch: switch {
@@ -91,9 +79,8 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <400>;
-            flavor = "tap-unless-interrupted";
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
-            hold-while-undecided;
+            flavor = "balanced";
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
         };
 
         neo_level_r: neo_level_r {
@@ -102,11 +89,9 @@
             bindings = <&lt>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
-            quick-tap-ms = <(-1)>;
-            hold-while-undecided;
         };
 
         level_switch: level_switch {
@@ -151,10 +136,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB      &kp DE_Q           &kp DE_W           &kp DE_E               &kp DE_R             &kp DE_T     &kp DE_Z   &kp DE_U              &kp DE_I                &kp DE_O            &kp DE_P                   &kp DE_U_UMLAUT
-&lt 1 DE_SZ  &mt LEFT_WIN DE_A  &mt LEFT_ALT DE_S  &mt LEFT_CONTROL DE_D  &mt LEFT_SHIFT DE_F  &kp DE_G     &kp DE_H   &mt RIGHT_SHIFT DE_J  &mt RIGHT_CONTROL DE_K  &mt RIGHT_ALT DE_L  &mt RIGHT_WIN DE_O_UMLAUT  &lt 1 DE_A_UMLAUT
-&kp LSHFT    &kp DE_Y           &kp DE_X           &kp DE_C               &kp DE_V             &kp DE_B     &kp DE_N   &kp DE_M              &kp DE_COMMA            &kp DE_DOT          &kp DE_MINUS               &kp RIGHT_SHIFT
-                                                   &lt 5 LG(TAB)          &lt 3 DELETE         &kp ENTER    &kp SPACE  &lt 2 BACKSPACE       &lt 4 RIGHT_SHIFT
+&kp TAB               &kp DE_Q           &kp DE_W           &kp DE_E               &kp DE_R             &kp DE_T     &kp DE_Z   &kp DE_U              &kp DE_I                &kp DE_O            &kp DE_P                   &kp DE_U_UMLAUT
+&neo_level_l 1 DE_SZ  &mt LEFT_WIN DE_A  &mt LEFT_ALT DE_S  &mt LEFT_CONTROL DE_D  &mt LEFT_SHIFT DE_F  &kp DE_G     &kp DE_H   &mt RIGHT_SHIFT DE_J  &mt RIGHT_CONTROL DE_K  &mt RIGHT_ALT DE_L  &mt RIGHT_WIN DE_O_UMLAUT  &neo_level_r 1 DE_A_UMLAUT
+&kp LSHFT             &kp DE_Y           &kp DE_X           &kp DE_C               &kp DE_V             &kp DE_B     &kp DE_N   &kp DE_M              &kp DE_COMMA            &kp DE_DOT          &kp DE_MINUS               &kp RIGHT_SHIFT
+                                                            &lt 5 LG(TAB)          &lt 3 DELETE         &kp ENTER    &kp SPACE  &lt 2 BACKSPACE       &lt 4 RIGHT_SHIFT
             >;
         };
 
