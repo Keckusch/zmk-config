@@ -25,6 +25,44 @@
 
             label = "SWITCH";
         };
+
+        sleep_win: sleep_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp DE_X>,
+                <&macro_release>,
+                <&kp LEFT_WIN>,
+                <&macro_wait_time 50>,
+                <&macro_tap>,
+                <&kp DE_R>,
+                <&macro_wait_time 50>,
+                <&kp DE_E>;
+
+            label = "SLEEP_WIN";
+        };
+
+        shut_down: shut_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp DE_X>,
+                <&macro_release>,
+                <&kp LEFT_WIN>,
+                <&macro_wait_time 50>,
+                <&macro_tap>,
+                <&kp DE_R>,
+                <&macro_wait_time 50>,
+                <&kp DE_R>;
+
+            label = "SHUT_DOWN";
+        };
     };
 
     behaviors {
@@ -36,7 +74,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <400>;
             flavor = "balanced";
-            hold-trigger-key-positions = <6 7 8 9 10 11 23 35 34 22 33 21 32 20 31 19 18 30 28 27 26 16 13>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 23 35 34 22 33 21 32 20 31 19 18 30 28 27 26 16 13 39 38>;
         };
 
         hr_l_win_alt_shift: hr_l_win_alt_shift {
@@ -47,7 +85,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <400>;
             flavor = "balanced";
-            hold-trigger-key-positions = <6 7 8 9 10 11 23 35 34 22 33 21 32 20 31 19 18 30>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 23 35 34 22 33 21 32 20 31 19 18 30 39 38>;
         };
 
         hr_r_crtl: hr_r_crtl {
@@ -58,7 +96,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <400>;
             flavor = "balanced";
-            hold-trigger-key-positions = <6 28 27 26 16 13 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
+            hold-trigger-key-positions = <6 28 27 26 16 13 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 39 38>;
         };
 
         hr_r_win_alt_shift: hr_r_win_alt_shift {
@@ -109,9 +147,10 @@
     combos {
         compatible = "zmk,combos";
 
-        prefs {
+        prefs_l {
             bindings = <&lt 4 LEFT_SHIFT>;
             key-positions = <37 36>;
+            layers = <0>;
         };
 
         del_word {
@@ -124,6 +163,7 @@
         prefs_r {
             bindings = <&lt 4 LEFT_SHIFT>;
             key-positions = <40 41>;
+            layers = <0>;
         };
 
         r_t {
@@ -148,7 +188,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        default_layer_win {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -159,7 +199,7 @@
 &kp TAB               &kp DE_Q                           &kp DE_W                           &kp DE_E                      &kp DE_R                             &kp DE_T     &kp DE_Z   &kp DE_U                              &kp DE_I                       &kp DE_O                            &kp DE_P                                   &kp DE_U_UMLAUT
 &neo_level_l 1 DE_SZ  &hr_l_win_alt_shift LEFT_WIN DE_A  &hr_l_win_alt_shift LEFT_ALT DE_S  &hr_l_ctrl LEFT_CONTROL DE_D  &hr_l_win_alt_shift LEFT_SHIFT DE_F  &kp DE_G     &kp DE_H   &hr_r_win_alt_shift RIGHT_SHIFT DE_J  &hr_r_crtl RIGHT_CONTROL DE_K  &hr_r_win_alt_shift RIGHT_ALT DE_L  &hr_r_win_alt_shift RIGHT_WIN DE_O_UMLAUT  &neo_level_r 1 DE_A_UMLAUT
 &kp LSHFT             &kp DE_Y                           &kp DE_X                           &kp DE_C                      &kp DE_V                             &kp DE_B     &kp DE_N   &kp DE_M                              &kp DE_COMMA                   &kp DE_DOT                          &kp DE_MINUS                               &kp RIGHT_SHIFT
-                                                                                            &level_switch 5 LA(TAB)       &level_switch 3 DELETE               &kp ENTER    &kp SPACE  &level_switch 2 BACKSPACE             &level_switch 4 RIGHT_SHIFT
+                                                                                            &level_switch 5 LA(TAB)       &level_switch 3 DELETE               &kp ENTER    &kp SPACE  &level_switch 2 BACKSPACE             &level_switch 5 RIGHT_SHIFT
             >;
         };
 
@@ -204,10 +244,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&bt BT_CLR  &none         &none         &none         &none             &none           &none            &none                 &none          &none            &none              &none
-&none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3      &bt BT_SEL 4    &kp C_PREVIOUS   &kp C_PLAY_PAUSE      &kp C_NEXT     &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &none
-&none       &none         &none         &none         &none             &none           &rgb_ug RGB_TOG  &kp C_BRIGHTNESS_INC  &kp C_BRI_DEC  &none            &none              &none
-                                        &kp C_POWER   &kp C_SLEEP_MODE  &kp LG(DE_L)    &none            &none                 &none
+&bt BT_CLR  &none         &none         &none         &none         &none           &none            &none                 &none          &none            &none              &none
+&none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_PREVIOUS   &kp C_PLAY_PAUSE      &kp C_NEXT     &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &none
+&none       &none         &none         &none         &none         &none           &rgb_ug RGB_TOG  &kp C_BRIGHTNESS_INC  &kp C_BRI_DEC  &none            &none              &none
+                                        &shut_down    &sleep_win    &kp LG(DE_L)    &none            &none                 &none
             >;
         };
 
@@ -217,6 +257,15 @@
 &none   &trans  &trans  &trans  &trans  &none     &none   &kp F4  &kp F5  &kp F6   &none    &none
 &none   &none   &none   &none   &none   &none     &none   &kp F1  &kp F2  &kp F3   &none    &none
                         &none   &none   &none     &none   &none   &none
+            >;
+        };
+
+        default_layer_ipad {
+            bindings = <
+&kp TAB               &kp DE_Q                           &kp DE_W                           &kp DE_E                      &kp DE_R                             &kp DE_T     &kp DE_Z   &kp DE_U                              &kp DE_I                     &kp DE_O                            &kp DE_P                                   &kp DE_U_UMLAUT
+&neo_level_l 1 DE_SZ  &hr_l_win_alt_shift LEFT_WIN DE_A  &hr_l_win_alt_shift LEFT_ALT DE_S  &hr_l_ctrl RS(LEFT_ALT) DE_D  &hr_l_win_alt_shift LEFT_SHIFT DE_F  &kp DE_G     &kp DE_H   &hr_r_win_alt_shift RIGHT_SHIFT DE_J  &hr_r_crtl RIGHT_ALT DE_K    &hr_r_win_alt_shift RIGHT_ALT DE_L  &hr_r_win_alt_shift RIGHT_WIN DE_O_UMLAUT  &neo_level_r 1 DE_A_UMLAUT
+&kp LSHFT             &kp DE_Y                           &kp DE_X                           &kp DE_C                      &kp DE_V                             &kp DE_B     &kp DE_N   &kp DE_M                              &kp DE_COMMA                 &kp DE_DOT                          &kp DE_MINUS                               &kp RIGHT_SHIFT
+                                                                                            &level_switch 5 LA(TAB)       &level_switch 3 DELETE               &kp ENTER    &kp SPACE  &level_switch 2 BACKSPACE             &level_switch 5 RIGHT_SHIFT
             >;
         };
     };
