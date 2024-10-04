@@ -123,6 +123,21 @@
             bindings = <&lt 4 LEFT_SHIFT>;
             key-positions = <40 41>;
         };
+
+        r_t {
+            bindings = <&kp DE_R>;
+            key-positions = <4 5>;
+        };
+
+        c_v {
+            bindings = <&kp DE_C>;
+            key-positions = <27 28>;
+        };
+
+        p_u {
+            bindings = <&kp DE_U_UMLAUT>;
+            key-positions = <11 10>;
+        };
     };
 
     keymap {
