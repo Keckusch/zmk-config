@@ -40,7 +40,6 @@
                 <&macro_tap>,
                 <&kp DE_R>,
                 <&macro_wait_time 200>,
-                <&macro_tap>,
                 <&kp DE_E>;
 
             label = "SLEEP_WIN";
