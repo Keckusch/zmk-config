@@ -30,17 +30,13 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LEFT_WIN>,
-                <&macro_tap>,
-                <&kp DE_X>,
-                <&macro_release>,
-                <&kp LEFT_WIN>,
-                <&macro_wait_time 50>,
-                <&macro_tap>,
-                <&kp DE_R>,
-                <&macro_wait_time 50>,
-                <&kp DE_E>;
+                <&macro_press &kp LEFT_WIN>,
+                <&macro_tap &kp DE_X>,
+                <&macro_release &kp LEFT_WIN>,
+                <&macro_wait_time 200>,
+                <&macro_tap &kp DE_R>,
+                <&macro_wait_time 200>,
+                <&macro_tap &kp DE_E>;
 
             label = "SLEEP_WIN";
         };
