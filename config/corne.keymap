@@ -336,7 +336,7 @@
 
         navigate_mac {
             bindings = <
-&kp ESC  &none     &kp PG_DN  &kp UP     &kp PG_UP  &none      &kp RC(DE_Z)  &kp RC(RS(DE_Z))  &none          &none          &none              &none
+&kp ESC  &none     &kp PG_DN  &kp UP     &kp PG_UP  &none      &kp RG(DE_Z)  &kp RS(RG(DE_Z))  &none          &none          &none              &none
 &none    &kp HOME  &kp LEFT   &kp DOWN   &kp RIGHT  &kp END    &none         &kp RIGHT_SHIFT   &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &none
 &none    &none     &kp LG(X)  &kp LG(C)  &kp LG(V)  &none      &none         &none             &none          &none          &none              &none
                               &none      &none      &none      &none         &none             &none
