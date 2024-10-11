@@ -220,7 +220,7 @@
 
         del_word {
             bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <37 40>;
+            key-positions = <39 38>;
             timeout-ms = <100>;
             layers = <0>;
         };
@@ -306,10 +306,10 @@
 
         numpad {
             bindings = <
-&none  &none  &none  &none  &none  &none    &kp DE_PLUS      &kp DE_N7  &kp DE_N8     &kp DE_N9  &kp DE_MINUS  &kp BACKSPACE
-&none  &none  &none  &none  &none  &none    &kp DE_ASTERISK  &kp DE_N4  &kp DE_N5     &kp DE_N6  &kp DE_SLASH  &none
-&none  &none  &none  &none  &none  &none    &none            &kp DE_N1  &kp DE_N2     &kp DE_N3  &kp DE_COMMA  &kp DE_DOT
-                     &none  &none  &none    &kp ENTER        &kp DE_N0  &kp DE_COMMA
+&none  &none  &none  &none  &none  &none      &kp DE_PLUS      &kp DE_N7      &kp DE_N8  &kp DE_N9  &kp DE_MINUS  &none
+&none  &none  &none  &none  &none  &none      &kp DE_ASTERISK  &kp DE_N4      &kp DE_N5  &kp DE_N6  &kp DE_SLASH  &none
+&none  &none  &none  &none  &none  &none      &none            &kp DE_N1      &kp DE_N2  &kp DE_N3  &kp DE_COMMA  &kp DE_DOT
+                     &none  &none  &kp RET    &kp DE_SPACE     &kp BACKSPACE  &kp DE_N0
             >;
         };
 
