@@ -344,6 +344,42 @@
             key-positions = <7 8 9 10>;
             layers = <0>;
         };
+
+        ctrl_l_mac {
+            bindings = <&kp LEFT_WIN>;
+            key-positions = <15 14>;
+            layers = <0>;
+        };
+
+        alt_l_mac {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <14 13>;
+            layers = <0>;
+        };
+
+        ctrl_alt_l_mac {
+            bindings = <&kp LG(LEFT_ALT)>;
+            key-positions = <15 14 13>;
+            layers = <0>;
+        };
+
+        win_l_mac {
+            bindings = <&kp LCTRL>;
+            key-positions = <16 15 14 13>;
+            layers = <0>;
+        };
+
+        ctrl_shift_l_mac {
+            bindings = <&kp LG(LEFT_SHIFT)>;
+            key-positions = <16 15 14>;
+            layers = <0>;
+        };
+
+        ctrl_alt_shift_l_mac {
+            bindings = <&kp LA(LG(LEFT_SHIFT))>;
+            key-positions = <16 13>;
+            layers = <0>;
+        };
     };
 
     keymap {
