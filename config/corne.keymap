@@ -294,7 +294,7 @@
         ctrl_alt_shift_l {
             bindings = <&kp LA(LC(LEFT_SHIFT))>;
             key-positions = <16 13>;
-            layers = <0>;
+            layers = <0 7>;
         };
 
         crtl_r {
@@ -330,7 +330,7 @@
         crtl_alt_shift_r {
             bindings = <&kp LA(LC(LEFT_SHIFT))>;
             key-positions = <19 22>;
-            layers = <0>;
+            layers = <0 7>;
         };
 
         screenshoot_l {
@@ -348,37 +348,68 @@
         ctrl_l_mac {
             bindings = <&kp LEFT_WIN>;
             key-positions = <15 14>;
-            layers = <0>;
+            layers = <1>;
         };
 
         alt_l_mac {
             bindings = <&kp LEFT_ALT>;
             key-positions = <14 13>;
-            layers = <0>;
+            layers = <1>;
         };
 
         ctrl_alt_l_mac {
             bindings = <&kp LG(LEFT_ALT)>;
             key-positions = <15 14 13>;
-            layers = <0>;
+            layers = <1>;
         };
 
         win_l_mac {
             bindings = <&kp LCTRL>;
             key-positions = <16 15 14 13>;
-            layers = <0>;
+            layers = <1>;
         };
 
         ctrl_shift_l_mac {
             bindings = <&kp LG(LEFT_SHIFT)>;
             key-positions = <16 15 14>;
-            layers = <0>;
+            layers = <1>;
         };
 
-        ctrl_alt_shift_l_mac {
-            bindings = <&kp LA(LG(LEFT_SHIFT))>;
-            key-positions = <16 13>;
-            layers = <0>;
+        ctrl_r_mac {
+            bindings = <&kp RIGHT_WIN>;
+            key-positions = <20 21>;
+            layers = <1>;
+        };
+
+        alt_r_mac {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <22 21>;
+            layers = <1>;
+        };
+
+        crtl_alt_r_mac {
+            bindings = <&kp RG(RIGHT_ALT)>;
+            key-positions = <20 21 22>;
+            layers = <1>;
+        };
+
+        win_r_mac {
+            bindings = <&kp RCTRL>;
+            key-positions = <22 21 20 19>;
+            layers = <1>;
+        };
+
+        ctrl_shift_r_mac {
+            bindings = <&kp LG(LEFT_SHIFT)>;
+            key-positions = <21 20 19>;
+            layers = <1>;
+        };
+
+        del_word_mac {
+            bindings = <&kp LG(BACKSPACE)>;
+            key-positions = <39 38>;
+            timeout-ms = <100>;
+            layers = <1>;
         };
     };
 
@@ -402,10 +433,10 @@
 
         default_layer_ipad {
             bindings = <
-&kp TAB               &kp DE_Q                               &kp DE_W                           &kp DE_E                      &kp DE_R                             &kp DE_T     &kp DE_Z   &kp DE_U                              &kp DE_I                     &kp DE_O                            &kp DE_P                                       &kp DE_U_UMLAUT
-&neo_level_l 7 DE_SZ  &hr_l_win_alt_shift LEFT_CONTROL DE_A  &hr_l_win_alt_shift LEFT_ALT DE_S  &hr_l_ctrl RS(LEFT_WIN) DE_D  &hr_l_win_alt_shift LEFT_SHIFT DE_F  &kp DE_G     &kp DE_H   &hr_r_win_alt_shift RIGHT_SHIFT DE_J  &hr_r_crtl RIGHT_WIN DE_K    &hr_r_win_alt_shift RIGHT_ALT DE_L  &hr_r_win_alt_shift RIGHT_CONTROL DE_O_UMLAUT  &neo_level_r 7 DE_A_UMLAUT
-&kp LSHFT             &kp DE_Y                               &kp DE_X                           &kp DE_C                      &kp DE_V                             &kp DE_B     &kp DE_N   &kp DE_M                              &kp DE_COMMA                 &kp DE_DOT                          &kp DE_MINUS                                   &kp RIGHT_SHIFT
-                                                                                                &level_switch 6 LA(TAB)       &level_switch 4 DELETE               &kp ENTER    &kp SPACE  &level_switch 8 BACKSPACE             &level_switch 6 RIGHT_SHIFT
+&kp TAB               &kp DE_Q  &kp DE_W  &kp DE_E                 &kp DE_R                             &kp DE_T     &kp DE_Z   &kp DE_U                              &kp DE_I                     &kp DE_O    &kp DE_P         &kp DE_U_UMLAUT
+&neo_level_l 7 DE_SZ  &kp DE_A  &kp DE_S  &kp DE_D                 &hr_l_win_alt_shift LEFT_SHIFT DE_F  &kp DE_G     &kp DE_H   &hr_r_win_alt_shift RIGHT_SHIFT DE_J  &kp DE_K                     &kp DE_L    &kp DE_O_UMLAUT  &neo_level_r 7 DE_A_UMLAUT
+&kp LSHFT             &kp DE_Y  &kp DE_X  &kp DE_C                 &kp DE_V                             &kp DE_B     &kp DE_N   &kp DE_M                              &kp DE_COMMA                 &kp DE_DOT  &kp DE_MINUS     &kp RIGHT_SHIFT
+                                          &level_switch 6 LA(TAB)  &level_switch 4 DELETE               &kp ENTER    &kp SPACE  &level_switch 8 BACKSPACE             &level_switch 6 RIGHT_SHIFT
             >;
         };
 
