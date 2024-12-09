@@ -352,7 +352,7 @@
         };
 
         alt_l_mac {
-            bindings = <&kp LEFT_ALT>;
+            bindings = <&kp LEFT_CONTROL>;
             key-positions = <14 13>;
             layers = <1>;
         };
@@ -364,7 +364,7 @@
         };
 
         win_l_mac {
-            bindings = <&kp LCTRL>;
+            bindings = <&kp LEFT_ALT>;
             key-positions = <16 15 14 13>;
             layers = <1>;
         };
@@ -382,7 +382,7 @@
         };
 
         alt_r_mac {
-            bindings = <&kp LEFT_ALT>;
+            bindings = <&kp RIGHT_CONTROL>;
             key-positions = <22 21>;
             layers = <1>;
         };
@@ -394,7 +394,7 @@
         };
 
         win_r_mac {
-            bindings = <&kp RCTRL>;
+            bindings = <&kp RIGHT_ALT>;
             key-positions = <22 21 20 19>;
             layers = <1>;
         };
@@ -406,9 +406,33 @@
         };
 
         del_word_mac {
-            bindings = <&kp LG(BACKSPACE)>;
+            bindings = <&kp LA(BACKSPACE)>;
             key-positions = <39 38>;
             timeout-ms = <100>;
+            layers = <1>;
+        };
+
+        shift_l_mac {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <15 16>;
+            layers = <1 0>;
+        };
+
+        shift_r_mac {
+            bindings = <&kp RIGHT_SHIFT>;
+            key-positions = <19 20>;
+            layers = <1 0>;
+        };
+
+        screenshot_l_mac {
+            bindings = <&kp LG(LS(DE_N4))>;
+            key-positions = <4 3 2 1>;
+            layers = <1>;
+        };
+
+        screenshot_r_mac {
+            bindings = <&kp RS(RG(DE_N4))>;
+            key-positions = <7 8 9 10>;
             layers = <1>;
         };
     };
@@ -433,10 +457,10 @@
 
         default_layer_ipad {
             bindings = <
-&kp TAB               &kp DE_Q  &kp DE_W  &kp DE_E                 &kp DE_R                             &kp DE_T     &kp DE_Z   &kp DE_U                              &kp DE_I                     &kp DE_O    &kp DE_P         &kp DE_U_UMLAUT
-&neo_level_l 7 DE_SZ  &kp DE_A  &kp DE_S  &kp DE_D                 &hr_l_win_alt_shift LEFT_SHIFT DE_F  &kp DE_G     &kp DE_H   &hr_r_win_alt_shift RIGHT_SHIFT DE_J  &kp DE_K                     &kp DE_L    &kp DE_O_UMLAUT  &neo_level_r 7 DE_A_UMLAUT
-&kp LSHFT             &kp DE_Y  &kp DE_X  &kp DE_C                 &kp DE_V                             &kp DE_B     &kp DE_N   &kp DE_M                              &kp DE_COMMA                 &kp DE_DOT  &kp DE_MINUS     &kp RIGHT_SHIFT
-                                          &level_switch 6 LA(TAB)  &level_switch 4 DELETE               &kp ENTER    &kp SPACE  &level_switch 8 BACKSPACE             &level_switch 6 RIGHT_SHIFT
+&kp TAB               &kp DE_Q  &kp DE_W  &kp DE_E                 &kp DE_R                &kp DE_T     &kp DE_Z   &kp DE_U                   &kp DE_I                     &kp DE_O    &kp DE_P         &kp DE_U_UMLAUT
+&neo_level_l 7 DE_SZ  &kp DE_A  &kp DE_S  &kp DE_D                 &kp DE_F                &kp DE_G     &kp DE_H   &kp DE_J                   &kp DE_K                     &kp DE_L    &kp DE_O_UMLAUT  &neo_level_r 7 DE_A_UMLAUT
+&kp LSHFT             &kp DE_Y  &kp DE_X  &kp DE_C                 &kp DE_V                &kp DE_B     &kp DE_N   &kp DE_M                   &kp DE_COMMA                 &kp DE_DOT  &kp DE_MINUS     &kp RIGHT_SHIFT
+                                          &level_switch 6 LA(TAB)  &level_switch 4 DELETE  &kp ENTER    &kp SPACE  &level_switch 8 BACKSPACE  &level_switch 6 RIGHT_SHIFT
             >;
         };
 
