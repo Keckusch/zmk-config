@@ -369,7 +369,7 @@
         };
 
         shift_l_mac {
-            bindings = <&kp RIGHT_SHIFT>;
+            bindings = <&kp SPACE>;
             key-positions = <15 16>;
             layers = <1 0>;
             timeout-ms = <300>;
