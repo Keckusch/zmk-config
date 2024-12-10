@@ -70,10 +70,10 @@
             bindings =
                 <&macro_press>,
                 <&kp LEFT_WIN &kp LEFT_SHIFT>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp C_EJECT>,
                 <&macro_release>,
-                <&kp LEFT_ALT &kp LEFT_WIN &kp C_EJECT>;
+                <&kp LEFT_ALT &kp LEFT_WIN>;
 
             label = "SLEEP_MAC";
         };
