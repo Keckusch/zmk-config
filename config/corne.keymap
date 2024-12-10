@@ -369,7 +369,7 @@
         };
 
         shift_l_mac {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp RIGHT_SHIFT>;
             key-positions = <15 16>;
             layers = <1>;
         };
