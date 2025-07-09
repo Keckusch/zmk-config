@@ -348,13 +348,14 @@
             bindings = <&kp LSHIFT>;
             key-positions = <15 16>;
             layers = <1 0>;
-            timeout-ms = <300>;
+            timeout-ms = <30>;
         };
 
         shift_r_mac {
             bindings = <&kp RSHIFT>;
             key-positions = <19 20>;
             layers = <1 0>;
+            timeout-ms = <30>;
         };
 
         screenshot_l_mac {
