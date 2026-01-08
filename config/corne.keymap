@@ -448,7 +448,7 @@
             bindings = <
 &bt BT_CLR  &none  &none        &none         &to 1      &to 0           &none            &none                 &none          &none            &none              &none
 &none       &ipad  &mac_privat  &bt BT_SEL 2  &win_work  &bt BT_SEL 4    &kp C_PREVIOUS   &kp C_PLAY_PAUSE      &kp C_NEXT     &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &none
-&none       &none  &none        &none         &none      &kp DE_EURO     &rgb_ug RGB_TOG  &kp C_BRIGHTNESS_INC  &kp C_BRI_DEC  &none            &none              &none
+&none       &none  &none        &none         &none      &studio_unlock  &rgb_ug RGB_TOG  &kp C_BRIGHTNESS_INC  &kp C_BRI_DEC  &none            &none              &none
                                 &shut_down    &gresc     &kp LG(DE_L)    &none            &none                 &none
             >;
         };
@@ -484,7 +484,7 @@
             bindings = <
 &bt BT_CLR  &none  &none        &none           &to 1       &to 0           &none            &none                 &none          &none            &none              &none
 &none       &ipad  &mac_privat  &bt BT_SEL 2    &win_work   &bt BT_SEL 4    &kp C_PREVIOUS   &kp C_PLAY_PAUSE      &kp C_NEXT     &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &none
-&none       &none  &none        &none           &none       &kp DE_EURO     &rgb_ug RGB_TOG  &kp C_BRIGHTNESS_INC  &kp C_BRI_DEC  &none            &none              &none
+&none       &none  &none        &none           &none       &studio_unlock  &rgb_ug RGB_TOG  &kp C_BRIGHTNESS_INC  &kp C_BRI_DEC  &none            &none              &none
                                 &shut_down_mac  &sleep_mac  &kp LG(DE_L)    &none            &none                 &none
             >;
         };
