@@ -18,10 +18,10 @@
 #
 ---
 include:
-  - board: nice_nano
+  - board: nice_nano_v2
     shield: corne_left nice_view nice_view_adapter
     snippets:
       - studio-rpc-usb-uart
 
-  - board: nice_nano
+  - board: nice_nano_v2
     shield: corne_right nice_view nice_view_adapter
