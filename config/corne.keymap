@@ -231,6 +231,7 @@
             bindings = <&kp RCTRL>;
             key-positions = <15 14>;
             layers = <0>;
+            timeout-ms = <30>;
         };
 
         alt_l {
@@ -268,12 +269,14 @@
             bindings = <&kp LCTRL>;
             key-positions = <20 21>;
             layers = <0>;
+            timeout-ms = <30>;
         };
 
         alt_r {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <22 21>;
             layers = <0>;
+            timeout-ms = <30>;
         };
 
         crtl_alt_r {
