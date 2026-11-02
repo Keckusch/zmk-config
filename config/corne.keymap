@@ -111,21 +111,27 @@
         ipad: ipad {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &to 1>;
+            bindings = <&bt BT_SEL 0
+                        &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4
+                        &to 1>;
             label = "IPAD";
         };
 
         mac_privat: win_privat {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to 1>;
+            bindings = <&bt BT_SEL 1
+                        &bt BT_DISC 0 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4
+                        &to 1>;
             label = "WIN_PRIVAT";
         };
 
         win_work: win_work {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &to 0>;
+            bindings = <&bt BT_SEL 2
+                        &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 3 &bt BT_DISC 4
+                        &to 0>;
             label = "WIN_WORK";
         };
     };
