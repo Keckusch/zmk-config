@@ -245,6 +245,7 @@
             key-positions = <14 13>;
             layers = <0>;
             timeout-ms = <30>;
+            require-prior-idle-ms = <150>;
         };
 
         crtl_alt_l {
@@ -332,6 +333,7 @@
             key-positions = <14 13>;
             layers = <1>;
             timeout-ms = <30>;
+            require-prior-idle-ms = <150>;
         };
 
         ctrl_r_mac {
